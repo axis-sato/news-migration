@@ -1,0 +1,12 @@
+development:
+  dialect: mysql
+  datasource: news:news_password@tcp(localhost:3309)/news?charset=utf8mb4&parseTime=True&loc=Local
+  dir: internal/pkg/db/migrations
+development.docker:
+  dialect: mysql
+  datasource: news:news_password@tcp(host.docker.internal:3309)/news?charset=utf8mb4&parseTime=True&loc=Local
+  dir: internal/pkg/db/migrations
+production:
+  dialect: mysql
+  datasource: ${MYSQL_USER}:${MYSQL_PASSWORD}@tcp(host.docker.internal:3306)/${MYSQL_DATABASE}?charset=utf8mb4&parseTime=True&loc=Local
+  dir: internal/pkg/db/migrations

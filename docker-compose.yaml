@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  workspace:
+    build:
+      context: .
+    environment:
+      - APP_ENV=development.docker
+    volumes:
+      - ./:/go/app
+    tty: true
