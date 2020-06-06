@@ -5,6 +5,11 @@ services:
       context: .
     environment:
       - APP_ENV=production
+      - MYSQL_HOST
+      - MYSQL_PORT
+      - MYSQL_USER
+      - MYSQL_PASSWORD
+      - MYSQL_DATABASE
     network_mode: "host"
     volumes:
       - ./:/go/app
