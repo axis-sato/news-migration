@@ -16,4 +16,4 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.SSK_KEY_PASSPHRASE }}
         port: ${{ secrets.SERVER_PORT }}
-        script: ./deploy.sh
+        script: ./deploy_migration.sh
